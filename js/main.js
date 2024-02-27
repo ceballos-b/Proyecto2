@@ -1,7 +1,7 @@
 function verificarEdad() {
-    var intentos = 0;
+    let intentos = 0;
     while (intentos < 3) {
-        var anioNacimiento = prompt("Por favor, ingresa el año de tu nacimiento:");
+        let anioNacimiento = prompt("Por favor, ingresa el año de tu nacimiento:");
 
         // Verificar si el usuario ha cancelado el prompt
         if (anioNacimiento === null) {
@@ -12,14 +12,14 @@ function verificarEdad() {
 
         // Verificar si la entrada es un año de 4 dígitos y si es un número
         if (anioNacimiento.length === 4 && !isNaN(anioNacimiento)) {
-            var fechaActual = new Date();
-            var anioActual = fechaActual.getFullYear();
+            let fechaActual = new Date();
+            let anioActual = fechaActual.getFullYear();
 
             anioNacimiento = parseInt(anioNacimiento);
 
             // Verificar si el año de nacimiento es mayor o igual a 1990
             if (anioNacimiento >= 1990) {
-                var edad = anioActual - anioNacimiento;
+                let edad = anioActual - anioNacimiento;
 
                 if (edad >= 18) {
                     alert("¡Bienvenido! Puedes acceder a la página.");
