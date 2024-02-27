@@ -17,13 +17,18 @@ function verificarEdad() {
 
             anioNacimiento = parseInt(anioNacimiento);
 
-            var edad = anioActual - anioNacimiento;
+            // Verificar si el año de nacimiento es mayor o igual a 1990
+            if (anioNacimiento >= 1990) {
+                var edad = anioActual - anioNacimiento;
 
-            if (edad >= 18) {
-                alert("¡Bienvenido! Puedes acceder a la página.");
-                return; // Salir de la función
+                if (edad >= 18) {
+                    alert("¡Bienvenido! Puedes acceder a la página.");
+                    return; // Salir de la función
+                } else {
+                    alert("Lo siento, debes ser mayor de 18 años.");
+                }
             } else {
-                alert("Lo siento, debes ser mayor de 18 años.");
+                alert("Lo siento, excedes el límite de edad requerido.");
             }
         } else {
             alert("Por favor, ingresa un año válido de 4 dígitos.");
